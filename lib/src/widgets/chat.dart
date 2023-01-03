@@ -551,7 +551,7 @@ class ChatState extends State<Chat> {
       } else {
         final messageWidth = message is types.CustomMessage && (message as types.CustomMessage).metadata?["showCenter"] == true
             ? constraints.maxWidth.floor()
-            : (widget.showUserAvatars && message.author.id != widget.user.id
+            : 40 + (widget.showUserAvatars && message.author.id != widget.user.id
               ? min(constraints.maxWidth * 0.72, 440).floor()
               : min(constraints.maxWidth * 0.78, 440).floor());
 
