@@ -239,7 +239,7 @@ class Message extends StatelessWidget {
           if (!currentUserIsAuthor && showUserAvatars) _avatarBuilder(),
           ConstrainedBox(
             constraints: BoxConstraints(
-              maxWidth: messageWidth.toDouble(),
+              maxWidth: messageWidth.toDouble() - 40,
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
